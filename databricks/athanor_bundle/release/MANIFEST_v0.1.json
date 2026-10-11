@@ -13,7 +13,7 @@
     {
       "path": "contracts/audit_verdict.v1.schema.json",
       "row_count": null,
-      "sha256": "ceb379f2a045303db46a0bb785d0d529a9f0b912bb7e6bf3267d6be66a0cdc74"
+      "sha256": "7d340c31e83a0f14829169b2e2ea326ca821c15efc352c62b96110e1b6508948"
     },
     {
       "path": "contracts/eval_gate.v1.schema.json",
@@ -38,7 +38,7 @@
     {
       "path": "docs/INGEST_CONTRACT.md",
       "row_count": null,
-      "sha256": "eb5f5fc479a89882ee5017a868235ea239386cffc2c93eb525e5ca87fec15634"
+      "sha256": "2f6fc24e874237e9421980c9fea9f4e42766efa3dc0bcb12a19ba4e117018de4"
     },
     {
       "path": "src/athanor_data/__init__.py",
@@ -48,7 +48,7 @@
     {
       "path": "src/athanor_data/contracts.py",
       "row_count": null,
-      "sha256": "b24fc6fad0d03d701929819917b284ae0d6d1eaa6baecf21dfc72d8e541745e9"
+      "sha256": "4fddf2243cf92232e632f3ade6344fcc5acd8e51265eb2b4cea046c58121d894"
     },
     {
       "path": "src/athanor_data/split.py",
@@ -63,7 +63,7 @@
     {
       "path": "src/notebooks/pipeline.py",
       "row_count": null,
-      "sha256": "0455155d49821033783cc9c96b2604f870b63169483a5c92cf1faeb496db5d00"
+      "sha256": "eb9086605a5a867e494e99d4b949c8ef033c3c702882e38156ed9f5934a4fca1"
     },
     {
       "path": "scripts/build_manifest.py",
@@ -83,9 +83,9 @@
     {
       "path": "tests/test_contracts.py",
       "row_count": null,
-      "sha256": "f4786f815365f493fe7262f3983371d551da080398d0f55544138159acbf1068"
+      "sha256": "aaded64dd7f76aeb38cbd4cc1df624b4de069aa611f6783eaa9949b8bfbbc240"
     }
   ],
-  "generated_at": "2026-10-11T03:37:45.812983+00:00",
+  "generated_at": "2026-10-11T04:19:14.391930+00:00",
   "schema_version": "athanor.manifest.v1"
 }

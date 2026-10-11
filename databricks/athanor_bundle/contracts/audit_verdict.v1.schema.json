@@ -94,7 +94,7 @@
         "null"
       ]
     },
-    "is_agreement_control": {
+    "is_judge_self_agreement": {
       "type": [
         "boolean"
       ]
@@ -132,7 +132,7 @@
     "judge_version",
     "judge_winner",
     "human_reviewed",
-    "is_agreement_control",
+    "is_judge_self_agreement",
     "source_path",
     "source_sha256",
     "landed_by",

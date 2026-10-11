@@ -11,6 +11,11 @@ def test_human_separate_from_judge():
     errs = validate("audit_verdict", {"human_reviewed": False, "human_winner": "BASE"})
     assert "human_winner_without_review" in errs
 
+def test_self_agreement_is_not_human_agreement():
+    f = CONTRACTS["audit_verdict"]["fields"]
+    assert "is_judge_self_agreement" in f and "is_agreement_control" not in f
+    assert "missing:is_judge_self_agreement" in validate("audit_verdict", {"contract_version": "athanor.v1"})
+
 def test_gates_not_training_labels():
     assert "passed" not in CONTRACTS["sft_row"]["fields"] and "judge_winner" not in CONTRACTS["sft_row"]["fields"]
 

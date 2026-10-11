@@ -44,6 +44,8 @@ for ent, c in CONTRACTS.items():
             checks.append(f"IF(p.{f} IS NOT NULL AND p.{f} NOT IN ({vals}), 'enum:{f}', NULL)")
         if ent == "audit_verdict":
             checks.append("IF(p.human_reviewed = false AND p.human_winner IS NOT NULL, 'human_winner_without_review', NULL)")
+        if ent == "sft_row":  # rows seeded from outside text land with rights='unknown' and are held in quarantine
+            checks.append("IF(lower(p.rights) = 'unknown', 'rights_unknown', NULL)")
         spark.sql(f"""CREATE OR REPLACE TEMP VIEW chk AS SELECT raw_id, payload_json, p,
             filter(array({', '.join(checks)}), x -> x IS NOT NULL) AS reasons
             FROM (SELECT raw_id, payload_json, from_json(payload_json, '{ddl}') AS p FROM {fq('raw_'+ent)})""")

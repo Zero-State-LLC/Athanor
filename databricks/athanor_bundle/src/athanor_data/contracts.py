@@ -28,7 +28,9 @@ CONTRACTS = {
             "judge_prompt_sha256": ("string", False),
             "judge_winner": ("string", True), "judge_rationale": ("string", False),
             "human_reviewed": ("boolean", True), "human_winner": ("string", False),
-            "human_reviewer": ("string", False), "is_agreement_control": ("boolean", True),
+            # is_judge_self_agreement: row belongs to the control where the SAME judge model is run under two
+            # protocols (with / without reference) to test self-consistency. It is NOT human agreement.
+            "human_reviewer": ("string", False), "is_judge_self_agreement": ("boolean", True),
             "source_path": ("string", True), "source_sha256": ("string", True),
             "landed_by": ("string", True), "landed_at": ("string", True),
         },
