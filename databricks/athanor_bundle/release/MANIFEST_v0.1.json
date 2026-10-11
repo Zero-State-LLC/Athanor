@@ -1,0 +1,91 @@
+{
+  "files": [
+    {
+      "path": "databricks.yml",
+      "row_count": null,
+      "sha256": "74080c4c179c42efe5f889f0a0a1836a49a3f9b62a43fb90429d4e4d39918fb4"
+    },
+    {
+      "path": "README.md",
+      "row_count": null,
+      "sha256": "b976de86bdc0e9c3dc4194b12b600b934e565a99e05a464a8602712d64834ba7"
+    },
+    {
+      "path": "contracts/audit_verdict.v1.schema.json",
+      "row_count": null,
+      "sha256": "7d340c31e83a0f14829169b2e2ea326ca821c15efc352c62b96110e1b6508948"
+    },
+    {
+      "path": "contracts/eval_gate.v1.schema.json",
+      "row_count": null,
+      "sha256": "582ef58fd3a3fdf16b157de9f350bb152280f4f8a54fdedd10874244d191c82c"
+    },
+    {
+      "path": "contracts/run_telemetry.v1.schema.json",
+      "row_count": null,
+      "sha256": "80df5e43229f10ae11838b021b1ed0cd8304b811774348655ea56f8f61a032d1"
+    },
+    {
+      "path": "contracts/sft_row.v1.schema.json",
+      "row_count": null,
+      "sha256": "c4941923ce5890ed3350d722763a52c94d9e8ecae84a739fbb4ce1fd4152f82e"
+    },
+    {
+      "path": "docs/HANDOFF_SPARK.md",
+      "row_count": null,
+      "sha256": "6e17fadd7d2ecefb8f63a156a34b42587f1fd7daae3b54ff90e482baa4ef5fa6"
+    },
+    {
+      "path": "docs/INGEST_CONTRACT.md",
+      "row_count": null,
+      "sha256": "2f6fc24e874237e9421980c9fea9f4e42766efa3dc0bcb12a19ba4e117018de4"
+    },
+    {
+      "path": "src/athanor_data/__init__.py",
+      "row_count": null,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/athanor_data/contracts.py",
+      "row_count": null,
+      "sha256": "4fddf2243cf92232e632f3ade6344fcc5acd8e51265eb2b4cea046c58121d894"
+    },
+    {
+      "path": "src/athanor_data/split.py",
+      "row_count": null,
+      "sha256": "81d3cb173ca6ce184bac9f16c8e329dd3302af0106078c318a4f490e07db5cae"
+    },
+    {
+      "path": "src/athanor_data/sql.py",
+      "row_count": null,
+      "sha256": "1f572da2c09d3777f0da8983a8ed9502fc5c71370a3aa42ce8ca049dc3d96633"
+    },
+    {
+      "path": "src/notebooks/pipeline.py",
+      "row_count": null,
+      "sha256": "eb9086605a5a867e494e99d4b949c8ef033c3c702882e38156ed9f5934a4fca1"
+    },
+    {
+      "path": "scripts/build_manifest.py",
+      "row_count": null,
+      "sha256": "72d05da6ac96478de17abc02611d0255b73c5bb2327765e1f7e570561ed2bbc8"
+    },
+    {
+      "path": "scripts/gen_schemas.py",
+      "row_count": null,
+      "sha256": "6493dc849fe605cb481319c57ca8d5ac0a0520e58c8891502931e3aa8c7c6219"
+    },
+    {
+      "path": "scripts/land_record.py",
+      "row_count": null,
+      "sha256": "626d8623ada3f4e9f09d40fb2b5f2f8866b1462384506d4c1d778132ecb437b0"
+    },
+    {
+      "path": "tests/test_contracts.py",
+      "row_count": null,
+      "sha256": "aaded64dd7f76aeb38cbd4cc1df624b4de069aa611f6783eaa9949b8bfbbc240"
+    }
+  ],
+  "generated_at": "2026-10-11T04:19:14.391930+00:00",
+  "schema_version": "athanor.manifest.v1"
+}

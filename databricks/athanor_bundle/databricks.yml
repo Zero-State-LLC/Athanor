@@ -1,0 +1,46 @@
+bundle:
+  name: zs_athanor_data
+
+variables:
+  catalog:
+    description: Unity Catalog catalog, no default.
+  schema:
+    description: Schema for Athanor tables.
+    default: athanor_dev
+
+resources:
+  jobs:
+    zs_athanor_data_pipeline:
+      name: zs_athanor_data_pipeline
+      # no schedule / trigger: run manually only
+      environments:
+        - environment_key: default
+          spec:
+            client: "2"
+      tasks:
+        - task_key: raw_ingest
+          environment_key: default
+          spark_python_task:
+            python_file: src/notebooks/pipeline.py
+            parameters: ["--src", "${workspace.file_path}/src", "--catalog", "${var.catalog}", "--schema", "${var.schema}", "--stage", "raw"]
+        - task_key: validate
+          depends_on: [{task_key: raw_ingest}]
+          environment_key: default
+          spark_python_task:
+            python_file: src/notebooks/pipeline.py
+            parameters: ["--src", "${workspace.file_path}/src", "--catalog", "${var.catalog}", "--schema", "${var.schema}", "--stage", "validate"]
+        - task_key: curate
+          depends_on: [{task_key: validate}]
+          environment_key: default
+          spark_python_task:
+            python_file: src/notebooks/pipeline.py
+            parameters: ["--src", "${workspace.file_path}/src", "--catalog", "${var.catalog}", "--schema", "${var.schema}", "--stage", "curate"]
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      profile: zer0state
+    variables:
+      catalog: workspace

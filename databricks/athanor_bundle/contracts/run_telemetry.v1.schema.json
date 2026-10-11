@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "athanor.v1.run_telemetry",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "telemetry_id": {
+      "type": [
+        "string"
+      ]
+    },
+    "contract_version": {
+      "type": [
+        "string"
+      ]
+    },
+    "run_id": {
+      "type": [
+        "string"
+      ]
+    },
+    "host": {
+      "type": [
+        "string"
+      ]
+    },
+    "base_model": {
+      "type": [
+        "string"
+      ]
+    },
+    "config_sha256": {
+      "type": [
+        "string"
+      ]
+    },
+    "step": {
+      "type": [
+        "integer"
+      ]
+    },
+    "epoch": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "loss": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "eval_loss": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "learning_rate": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "source_path": {
+      "type": [
+        "string"
+      ]
+    },
+    "source_sha256": {
+      "type": [
+        "string"
+      ]
+    },
+    "landed_by": {
+      "type": [
+        "string"
+      ]
+    },
+    "landed_at": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "required": [
+    "telemetry_id",
+    "contract_version",
+    "run_id",
+    "host",
+    "base_model",
+    "config_sha256",
+    "step",
+    "source_path",
+    "source_sha256",
+    "landed_by",
+    "landed_at"
+  ]
+}

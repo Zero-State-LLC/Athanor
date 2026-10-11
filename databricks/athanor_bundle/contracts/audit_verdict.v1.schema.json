@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "athanor.v1.audit_verdict",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "verdict_id": {
+      "type": [
+        "string"
+      ]
+    },
+    "contract_version": {
+      "type": [
+        "string"
+      ]
+    },
+    "record_id": {
+      "type": [
+        "string"
+      ]
+    },
+    "family": {
+      "type": [
+        "string"
+      ]
+    },
+    "audit_round": {
+      "type": [
+        "string"
+      ]
+    },
+    "candidate_model": {
+      "type": [
+        "string"
+      ]
+    },
+    "baseline_model": {
+      "type": [
+        "string"
+      ]
+    },
+    "judge_model": {
+      "type": [
+        "string"
+      ]
+    },
+    "judge_version": {
+      "type": [
+        "string"
+      ]
+    },
+    "judge_prompt_sha256": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "judge_winner": {
+      "type": [
+        "string"
+      ],
+      "enum": [
+        "TARGET",
+        "BASE",
+        "TIE"
+      ]
+    },
+    "judge_rationale": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "human_reviewed": {
+      "type": [
+        "boolean"
+      ]
+    },
+    "human_winner": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "TARGET",
+        "BASE",
+        "TIE",
+        null
+      ]
+    },
+    "human_reviewer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "is_judge_self_agreement": {
+      "type": [
+        "boolean"
+      ]
+    },
+    "source_path": {
+      "type": [
+        "string"
+      ]
+    },
+    "source_sha256": {
+      "type": [
+        "string"
+      ]
+    },
+    "landed_by": {
+      "type": [
+        "string"
+      ]
+    },
+    "landed_at": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "required": [
+    "verdict_id",
+    "contract_version",
+    "record_id",
+    "family",
+    "audit_round",
+    "candidate_model",
+    "baseline_model",
+    "judge_model",
+    "judge_version",
+    "judge_winner",
+    "human_reviewed",
+    "is_judge_self_agreement",
+    "source_path",
+    "source_sha256",
+    "landed_by",
+    "landed_at"
+  ]
+}
