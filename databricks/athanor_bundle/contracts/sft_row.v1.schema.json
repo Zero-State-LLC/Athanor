@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "athanor.v1.sft_row",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "record_id": {
+      "type": [
+        "string"
+      ]
+    },
+    "contract_version": {
+      "type": [
+        "string"
+      ]
+    },
+    "run_id": {
+      "type": [
+        "string"
+      ]
+    },
+    "family": {
+      "type": [
+        "string"
+      ]
+    },
+    "domain": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "prompt": {
+      "type": [
+        "string"
+      ]
+    },
+    "target": {
+      "type": [
+        "string"
+      ]
+    },
+    "source_kind": {
+      "type": [
+        "string"
+      ],
+      "enum": [
+        "observed",
+        "synthetic",
+        "model_generated"
+      ]
+    },
+    "source_path": {
+      "type": [
+        "string"
+      ]
+    },
+    "source_sha256": {
+      "type": [
+        "string"
+      ]
+    },
+    "source_line": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "generator": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rights": {
+      "type": [
+        "string"
+      ]
+    },
+    "landed_by": {
+      "type": [
+        "string"
+      ]
+    },
+    "landed_at": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "required": [
+    "record_id",
+    "contract_version",
+    "run_id",
+    "family",
+    "prompt",
+    "target",
+    "source_kind",
+    "source_path",
+    "source_sha256",
+    "rights",
+    "landed_by",
+    "landed_at"
+  ]
+}

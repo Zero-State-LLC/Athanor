@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "athanor.v1.eval_gate",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "eval_id": {
+      "type": [
+        "string"
+      ]
+    },
+    "contract_version": {
+      "type": [
+        "string"
+      ]
+    },
+    "run_id": {
+      "type": [
+        "string"
+      ]
+    },
+    "checkpoint": {
+      "type": [
+        "string"
+      ]
+    },
+    "eval_suite": {
+      "type": [
+        "string"
+      ]
+    },
+    "gate_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        null
+      ]
+    },
+    "gate_spec_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "metric": {
+      "type": [
+        "string"
+      ]
+    },
+    "value": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "threshold": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "passed": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "n_samples": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "source_path": {
+      "type": [
+        "string"
+      ]
+    },
+    "source_sha256": {
+      "type": [
+        "string"
+      ]
+    },
+    "landed_by": {
+      "type": [
+        "string"
+      ]
+    },
+    "landed_at": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "required": [
+    "eval_id",
+    "contract_version",
+    "run_id",
+    "checkpoint",
+    "eval_suite",
+    "metric",
+    "source_path",
+    "source_sha256",
+    "landed_by",
+    "landed_at"
+  ]
+}
