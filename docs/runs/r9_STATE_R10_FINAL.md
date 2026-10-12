@@ -1,0 +1,6 @@
+# run010 (retrieval ladder) — R2 HALT, no generation (2026-10-11). PREREG-010 sha256 5e73581311259048852a17de8f461cca56c4bc44324122b10c792e2d0a61e19d
+DEV (200 q from train/val passages, gpt-4o-mini written): C0 0.695, C1 0.745, C2 0.700, C3(HyDE) 0.360 -> frozen C1 (bge-large+BM25 RRF); R1 (>=0.70) PASS.
+TEST (300 P1 q, run once): hit@3 = 121/300 = 0.403 < 0.60 -> R2 HALT. (Independent recompute: hit@1 .263, @3 .403, @10 .603, @30 .747, @100 .843, median gold rank 5.) bge-large gave the SAME 121 as bge-small (coincidence, verified).
+Diagnosis: (1) DEV is much easier than TEST (C0 0.695 vs ~0.40): DEV questions were written by gpt-4o-mini with the passage in view; P1 questions are generic. (2) gold-passage relevance (gpt-4o-mini, post-hoc): YES 194 / PARTIAL 90 / NO 16 of 300 -> only 65% of P1 questions are actually answerable from their own gold passage; hit@3 among YES = 99/194 (51%, run009 small). Examples of NO: 'Neoplatonism & material world' gold=Qabbalist passage; 'roles of angels' gold=library acknowledgements.
+Consequences: P1 hit@3 ceiling is structurally low; the with-reference P1 judge's reference may not come from the gold passage. C2 reranker did not help (0.700 < C1 0.745); HyDE hurt badly (0.360).
+No generation run. Nothing ships. No HF push.
