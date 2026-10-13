@@ -19,7 +19,7 @@ This does not govern or activate. Earlier dated entries remain historical; the c
 | CI | `.github/workflows/validate.yml` — local ruff+pytest is the bar; Actions may fail on account billing |
 | Harvest | Wave 0–1 + A–E + F fill3000 · Crawl4AI 0.9.3 · P3a gold sealed |
 | Local SoT | `~/.athanor/corpus/atoms.jsonl` — **2997** after F+DROP (400 GOLD OBSERVED; not in git) |
-| Hub / train | Blocked · Spec 002 P3a specify exit sealed; Aaron pack local-only |
+| Hub / train | **Hub: UNBLOCKED 2026-10-12 (Aaron) for the PRIVATE pipeline repo only** (code, config, model card; no corpus, index, weights or adapters; public release gated by PUBLIC_CHECKLIST). Train: still frozen · Aaron pack local-only |
 
 ## Wave 0 harvest (OBSERVED 2026-09-10 PT)
 
