@@ -1,0 +1,7 @@
+# PREREG-008 ADDENDUM 2 (2026-10-10; filed after judging, BEFORE any rejudge or training)
+Trigger: first judging pass returned K=715/715=1.000 (votes cand 8190 / BASE 326 / tie 64). Degenerate: zero selectivity. Diagnosed confound: r7 BASE answers were capped at max_new_tokens=300 and only 31% finished (stopped) vs 95% of candidates -> judges rewarded completeness over cut-off text.
+Per Aaron ("option 1"): regenerate BASE completed, then rejudge the SAME 2860 candidates with the SAME panel/protocol/prompt/flip seeds.
+Changes: BASE = Llama-3.1-Nemotron-Nano-8B-v1 (unchanged model, system 'detailed thinking off', temp 0.7, top_p 0.9, rep_pen 1.1, seed 7001+batch) with max_new_tokens 300 -> 800. Pass criterion for the new BASE: >= 90% of answers end by EOS; otherwise report.
+Unchanged: candidates, panel, clear-win rule (>=2/3), keep rule (>=1/4), gate K<0.30 HALT. The first-pass result (K=1.0) is discarded as confounded and kept on record in panel_cands.json (renamed panel_cands_pass1_confounded.json).
+KNOWN LIMITATION (disclosed now, not fixed): candidates come from a 120B teacher, BASE is an 8B student. A candidate beating an 8B base is therefore weak evidence of correctness; K will likely remain high. The gate measures 'teacher answer beats student zero-shot', not factual accuracy. No human labels exist. If K>=0.30 I will still hold and report before training unless Aaron says go.
+Operational: vLLM Nemotron-3-Super on spark2 stopped to free the GPU for BASE regeneration.
